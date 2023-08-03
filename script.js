@@ -140,7 +140,7 @@ class Enemy {
 			}
 		});
 		if (this.lives < 1) {
-			if (this.spriteUpdate) this.frameX++;
+			if (this.game.spriteUpdate) this.frameX++;
 			if (this.frameX > this.maxFrame) {
 				this.markedForDeletion = true;
 				if (!this.game.gameOver) this.game.score += this.maxLives;
