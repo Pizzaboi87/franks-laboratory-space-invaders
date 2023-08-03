@@ -307,16 +307,19 @@ class Game {
     for (let i = 0; i < this.player.maxLives; i++) {
       context.fillRect(20 + 20 * i, 100, 10, 15);
     }
+    context.save();
+    context.fillStyle = "red";
     for (let i = 0; i < this.player.lives; i++) {
-      context.fillRect(20 + 20 * i, 100, 10, 15);
+      context.fillRect(22.5 + 20 * i, 102.5, 5, 10);
     }
+    context.restore();
     if (this.gameOver) {
       context.textAlign = "center";
-      context.font = "80px Bungee Spice";
+      context.font = "60px Bungee Spice";
       context.fillText("GAME OVER", this.width * 0.5, this.height * 0.5);
-      context.font = "30px Bungee Spice";
+      context.font = "20px Bungee Spice";
       context.fillText(
-        "Press R to restart!",
+        'Press "R" to restart!',
         this.width * 0.5,
         this.height * 0.5 + 40
       );
