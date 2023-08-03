@@ -21,8 +21,8 @@ class Player {
 			this.frameX = 0;
 		}
 		context.drawImage(
-			this.jets_image,
-			this.jetsFrame * this.width,
+			this.image,
+			this.frameX * this.width,
 			0,
 			this.width,
 			this.height,
@@ -32,8 +32,8 @@ class Player {
 			this.height
 		);
 		context.drawImage(
-			this.image,
-			this.frameX * this.width,
+			this.jets_image,
+			this.jetsFrame * this.width,
 			0,
 			this.width,
 			this.height,
